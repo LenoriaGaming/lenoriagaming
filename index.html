@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lenorian Gaming Inc.</title>
+        <meta charset = "utf-8">
+        <!--Import Fonts-->
+        <style type = "text/css">
+            @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Oswald:200,300,400,500,600,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Slabo+27px');
+            
+            @import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+            
+            /*--No Margins--*/
+            
+            html,head,body { margin: 0px; }
+            ::selection {
+                background: rgb(100,100,100);
+            }
+            
+            /*--Header Start--*/
+            
+            .fixed-header-top {
+                background-color: rgba(0,0,0,0.7);
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 30px;
+                padding-right: 30px;
+                width: 100%;
+            }
+            .fixed-header-important {
+                font-family: "Raleway";
+                font-weight: 700;
+                color: white;
+                text-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+            }
+            .fixed-header-important:hover {
+                cursor: pointer;
+            }
+            .fixed-header-link {
+                font-family: "Raleway";
+                font-weight: 300;
+                color: white;
+                text-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+            }
+            .fixed-header-link:hover {
+                cursor: pointer;
+            }
+            .fixed-header-seperator {
+                font-family: "Raleway";
+                font-weight: 300;
+                color: white;
+                font-size: 20px;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            /*--Body CSS--*/
+            
+            .main-head-image {
+                background-image: url("https://s4.postimg.org/nht5eljzh/imageedit_1_4768984340.jpg");
+                background-size: cover;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+            }
+            .main-header-title {
+                font-family: "Raleway";
+                font-weight: 700;
+                color: white;
+                text-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+                font-size: 48px;
+                pointer-events: none;
+            }
+            .company-motto {
+                font-family: "Oswald";
+                font-weight: 300;
+                color: white;
+                text-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+                font-size: 24px;
+                pointer-events: none;
+            }
+            
+            /*--Animation Test--*/
+            @keyframes arrowdown {
+                0% {
+                    opacity: 1;
+                    -webkit-transform: translate(0, 0);
+                    -ms-transform: translate(0, 0);
+                    transform: translate(0, 0)
+                }
+            
+                90% {
+                    opacity: 1;
+                    -webkit-transform: translate(0, 0);
+                    -ms-transform: translate(0, 0);
+                    transform: translate(0, 0)
+                }
+            
+                100% {
+                    opacity: 0;
+                    -webkit-transform: translate(0, 104px);
+                    -ms-transform: translate(0, 104px);
+                    transform: translate(0, 104px)
+                }
+            }
+            .main-arrow-down {
+                animation: arrowdown 3s infinite ease-in;
+            }
+            .main-arrow-down:hover {
+                cursor: pointer;
+            }
+            .main-reminder {
+                font-family: "Raleway";
+                pointer-events: none;
+                text-transform: uppercase;
+                color: white;
+                font-weight: 300;
+                text-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+            }
+            
+            /*--Text Elements--*/
+            
+            .header {
+                font-family: "Oswald";
+                color: rgba(0,0,0,0.83);
+                font-weight: 300;
+                margin-left: 60px;
+            }
+            hr {
+                margin-left: 60px;
+                margin-right: 100px;
+            }
+            .body-text {
+                font-family: "Lato";
+                font-weight: 300;
+                color: rgba(0,0,0,0.83);
+                margin-left: 60px;
+                margin-right: 40px;
+            }
+        </style>
+        <!--Import AOS-->
+        <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+        <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+        <!--Smooth Scroll-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script>
+        AOS.init();
+        $(window).on('load', function () {
+            AOS.refresh();
+        });
+        $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $("a").on('click', function(event) {
+        
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+        
+              // Store hash
+              var hash = this.hash;
+        
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 800, function(){
+           
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        });
+        </script>
+    </head>
+    <!--Actual Body-->
+    <body>
+        <div class = "main-head-image">
+            <br><br><br><br><br><br><br><br><br>
+            <span class = "main-header-title">
+                <center>Lenorian Gaming Development</center>
+            </span>
+            <br>
+            <hr style = "margin-left: 45%; margin-right: 45%;">
+            <br><br><br>
+            <span class = "company-motto">
+                <center>Innovation is our priority.</center>
+            </span>
+            <br><br><br><br><br><br>
+            <center>
+                <div class = "main-reminder">
+                    SCROLL DOWN
+                </div><br>
+                <img src = "http://illfloentertainment.com/wp-content/uploads/2013/06/invers-double-arrow-down-128-300x300.png" class = "main-arrow-down" height = "32" width = "32">
+            </center>
+            <br><br><br><br><br>
+            
+        </div>
+        <br><br><br><br><br>
+            <div class = "header" data-aos="fade-right">
+                 WHAT WE DO:
+            </div>
+        <!--KEEP HEADER AT BAY-->
+        <div class = "fixed-header-top">
+            <span class = "fixed-header-logo">
+                <img src = "https://s8.postimg.org/5f18axq39/lenorialogo.png" height = "50" width = "200" style = "position: absolute; top: 10px;">
+            </span>
+            <span class = "fixed-header-important" style = "margin-left: 200px;">
+                Home
+            </span>
+            <span class = "fixed-header-seperator">
+                |
+            </span>
+        </div>
+    </body>
+</html>
